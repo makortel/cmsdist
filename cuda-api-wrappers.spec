@@ -1,10 +1,14 @@
-### RPM external cuda-api-wrappers 20180125
-%define tag fe0f79bd6ed2c25efb7b1ada19e9718f5299971e
+### RPM external cuda-api-wrappers 20180502
+#%define tag fe0f79bd6ed2c25efb7b1ada19e9718f5299971e
+#%define branch master
+#%define github_user cms-externals
+%define tag f1b1db2cc4912d68a5da0fb964c2232804db25b3
 %define branch master
-%define github_user cms-externals
+%define github_user eyalroz
+
 
 Source: git+https://github.com/%{github_user}/%{n}.git?obj=%{branch}/%{tag}&export=%{n}-%{realversion}&output=/%{n}-%{realversion}.tgz
-Requires: cuda
+Requires: cuda cub
 BuildRequires: cmake
 AutoReqProv: no
 
